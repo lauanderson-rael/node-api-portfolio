@@ -24,3 +24,11 @@ export async function atualizarPost(id, novoPost) {
     return colecao.updateOne({ _id: new ObjectId(obgID) }, { $set: novoPost })  // _id: identifica o elemento, $set: dados que serao atualizados
 
 }
+
+// deletar um post por ID
+export async function deletarPost(id) {
+    const db = conexao.db("imersao-instabytes");
+    const colecao = db.collection("posts");
+    const objID = ObjectId.createFromHexString(id); // Criando ObjectId a partir da string
+    return colecao.deleteOne({ _id: objID });
+}

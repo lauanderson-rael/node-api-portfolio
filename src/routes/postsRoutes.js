@@ -1,7 +1,7 @@
 import express from 'express'
 import multer from 'multer';
 import cors from 'cors'
-import { atualizarNovoPost, listarPosts, postarNovoPost, uploadImagem } from '../controllers/postsController.js';
+import { atualizarNovoPost, deletarPostPorId, listarPosts, postarNovoPost, uploadImagem } from '../controllers/postsController.js';
 
 // avisar que vamos receber requisicoes de uma link externo
 const corsOptions = {
@@ -29,6 +29,8 @@ const routes = (app) => {
     app.post("/upload", upload.single("imagem"), uploadImagem)
 
     app.put("/upload/:id", atualizarNovoPost)
+
+    app.delete("/delete/:id", deletarPostPorId)
 }
 
 export default routes;

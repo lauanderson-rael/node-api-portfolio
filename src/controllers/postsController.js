@@ -1,12 +1,16 @@
-import { getTodosPosts, criarPost, atualizarPost } from "../models/postsModel.js"
+import { getTodosPosts, criarPost, atualizarPost, deletarPost } from "../models/postsModel.js"
 import fs from 'fs'
 import gerarDescricaoComGemini from "../services/geminiService.js"
+
+
 
 
 export async function listarPosts(req, res) {
     const posts = await getTodosPosts()
     res.status(200).json(posts)
 }
+
+
 
 export async function postarNovoPost(req, res) {
     const novopost = req.body;
@@ -19,11 +23,17 @@ export async function postarNovoPost(req, res) {
     }
 }
 
+
+
 export async function uploadImagem(req, res) {
+    const id = req.params.id
+    const baseUrl = `${req.protocol}://${req.get('host')}`;
     const novopost = {
+        titulo: "",
         descricao: "",
-        imgUrl: req.file.originalname,
-        alt: ""
+        imgUrl: baseUrl + "/" + "???" + ".png",
+        alt: "",
+        link: ""
     }
 
     try {
@@ -38,16 +48,19 @@ export async function uploadImagem(req, res) {
 }
 
 
+
 export async function atualizarNovoPost(req, res) {
     const id = req.params.id
-    const urlImagem = `http://localhost:3000/${id}.png`
+    const baseUrl = `${req.protocol}://${req.get('host')}`;
+    const urlImagem = `${baseUrl}/${id}.png`
 
     try {
         const imgBuffer = fs.readFileSync(`uploads/${id}.png`)
-        const descricao = await gerarDescricaoComGemini(imgBuffer)
         const post = {
             imgUrl: urlImagem,
-            descricao: descricao,
+            descricao: req.body.descricao,
+            titulo: req.body.titulo,
+            link: req.body.link,
             alt: req.body.alt
         }
 
@@ -56,5 +69,21 @@ export async function atualizarNovoPost(req, res) {
     } catch (error) {
         console.log(error.message)
         res.status(500).json({ "Erro": "Falha na requisição!" })
+    }
+}
+
+
+
+export async function deletarPostPorId(req, res) {
+    const id = req.params.id;
+    try {
+        const resultado = await deletarPost(id);
+        if (resultado.deletedCount === 0) {
+            return res.status(404).json({ mensagem: 'Post não encontrado!' });
+        }
+        res.status(200).json({ mensagem: 'Post deletado com sucesso!' });
+    } catch (error) {
+        console.log(error.message);
+        res.status(500).json({ "Erro": "Falha na requisição!" });
     }
 }
