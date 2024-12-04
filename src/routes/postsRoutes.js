@@ -7,6 +7,7 @@ import { atualizarNovoPost, deletarPostPorId, listarPosts, postarNovoPost, uploa
 const corsOptions = {
     origin: ["http://localhost:8000", "http://localhost:5173", "https://lauanderson-portfolio.vercel.app", "https://backend-instabytes.vercel.app", "https://lauanderson-portfolio-k1baotfie-lauanderson-raels-projects.vercel.app"],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
     optiosSuccessStatus: 200
 }
 
