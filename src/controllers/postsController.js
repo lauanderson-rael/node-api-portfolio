@@ -3,8 +3,6 @@ import fs from 'fs'
 import gerarDescricaoComGemini from "../services/geminiService.js"
 
 
-
-
 export async function listarPosts(req, res) {
     const posts = await getTodosPosts()
     res.status(200).json(posts)

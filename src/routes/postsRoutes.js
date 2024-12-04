@@ -5,13 +5,14 @@ import { atualizarNovoPost, deletarPostPorId, listarPosts, postarNovoPost, uploa
 
 // avisar que vamos receber requisicoes de uma link externo
 const corsOptions = {
-    origin: "http://localhost:8000",
+    origin: ["http://localhost:8000", "http://localhost:5173", "https://lauanderson-portfolio.vercel.app"],
     optiosSuccessStatus: 200
 }
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, 'uploads/');
+
     },
     filename: function (req, file, cb) {
         cb(null, file.originalname);
