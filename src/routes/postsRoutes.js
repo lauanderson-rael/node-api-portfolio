@@ -5,7 +5,7 @@ import { atualizarNovoPost, deletarPostPorId, listarPosts, postarNovoPost, uploa
 
 // avisar que vamos receber requisicoes de uma link externo
 const corsOptions = {
-    origin: ["http://localhost:8000", "http://localhost:5173", "https://lauanderson-portfolio.vercel.app"],
+    origin: ["http://localhost:8000", "http://localhost:5173", "https://lauanderson-portfolio.vercel.app", "https://backend-instabytes.vercel.app"],
     optiosSuccessStatus: 200
 }
 
