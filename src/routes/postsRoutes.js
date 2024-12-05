@@ -26,6 +26,7 @@ const upload = multer({ dest: './uploads', storage })
 const routes = (app) => {
     app.use(express.json())
     app.use(cors(corsOptions))
+    app.use(express.urlencoded({ extended: true})) // interpretar formularios
 
     app.get("/posts", listarPosts);
     app.post("/posts", postarNovoPost)
