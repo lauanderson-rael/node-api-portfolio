@@ -27,6 +27,7 @@ const routes = (app) => {
     app.use(express.json())
     app.use(cors(corsOptions))
     app.use(express.urlencoded({ extended: true})) // interpretar formularios
+    app.use('/uploads', express.static('uploads'))
 
     app.get("/posts", listarPosts);
     app.post("/posts", postarNovoPost)
