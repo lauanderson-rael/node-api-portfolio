@@ -5,10 +5,10 @@ import { atualizarNovoPost, deletarPostPorId, listarPosts, postarNovoPost, uploa
 
 // avisar que vamos receber requisicoes de uma link externo
 const corsOptions = {
-    origin: ["http://localhost:8000", "http://localhost:5173", "https://lauanderson-portfolio.vercel.app", "https://backend-instabytes.vercel.app", "https://lauanderson-portfolio-k1baotfie-lauanderson-raels-projects.vercel.app", "https://backend-blog-tec.onrender.com", "https://lauanderson-portfolio-ds7ssn980-lauanderson-raels-projects.vercel.app/"],
+    origin: "*", // Permite qualquer origem
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
-    optiosSuccessStatus: 200
+    optionsSuccessStatus: 200 // Corrigido o typo de "optiosSuccessStatus" para "optionsSuccessStatus"
 }
 
 const storage = multer.diskStorage({
