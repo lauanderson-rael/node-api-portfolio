@@ -1,3 +1,6 @@
+
+import { ObjectId } from 'mongodb';
+//----------
 import { MongoClient } from 'mongodb';
 
 export async function conectarAoBanco(stringConexao) {
@@ -14,4 +17,14 @@ export async function conectarAoBanco(stringConexao) {
         console.error('Falha na conexão com o banco!', erro);
         process.exit();
     }
+}
+//----------
+
+const conexao = await conectarAoBanco(process.env.STRING_CONEXAO);
+
+export async function getUsuarioPorUsername(username) {
+    const db = conexao.db("imersao-instabytes");
+    const colecao = db.collection("usuarios");
+
+    return colecao.findOne({ username });
 }

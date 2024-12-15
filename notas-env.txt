@@ -1,0 +1,18 @@
+FRONT
+
+VITE_API_URL22222 = https://backend-instabytes-production.up.railway.app/posts
+VITE_API_URL = http://localhost:3000
+
+----------------------------------------------------
+
+BACK
+
+STRING_CONEXAO = mongodb+srv://lauanderson:TZw7Scx8FeDANtcD@cluster0-alura.jwftl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0-alura
+
+PORT = 3000
+
+JWT_SECRET=$yrubhdcbhbcbdb
+
+JWT_EXPIRES_IN=1h
+
+GEMINI_API_KEY = AIzaSyD-KRrxPUzx-XXmGbgaWh71UAjGKGKJfsM

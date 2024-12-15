@@ -1,7 +1,24 @@
 import 'dotenv/config'
-
 import { ObjectId } from 'mongodb'
-import conectarAoBanco from '../config/dbConfig.js'
+//------------
+import { MongoClient } from 'mongodb';
+async function conectarAoBanco(stringConexao) {
+    let mongoClient;
+
+    try {
+        mongoClient = new MongoClient(stringConexao);
+        console.log('Conectando ao cluster do banco de dados...');
+        await mongoClient.connect();
+        console.log('Conectado ao MongoDB Atlas com sucesso!');
+
+        return mongoClient;
+    } catch (erro) {
+        console.error('Falha na conexão com o banco!', erro);
+        process.exit();
+    }
+}
+
+//-------------
 const conexao = await conectarAoBanco(process.env.STRING_CONEXAO)
 
 export async function getTodosPosts() {
