@@ -1,0 +1,74 @@
+[
+    {
+    "_id": "675f7524751743bef4c47313",
+    "titulo": "React Native 0.76: Principais novidades e atualizações",
+    "descricao": "Conheça as mudanças mais relevantes da nova versão do React Native, incluindo melhorias de desempenho, ferramentas de desenvolvimento renovadas e novos recursos de estilização.",
+    "imgUrl": "http://backend-instabytes-production.up.railway.app/675f7524751743bef4c47313.png",
+    "alt": "Ilustração destacando o React Native 0.76",
+    "link": "https://imasters.com.br/framework/react-native-0-76-o-futuro-do-desenvolvimento-mobile"
+  },
+  {
+    "_id": "675f9297751743bef4c47315",
+    "titulo": "Meta planeja usar energia nuclear para treinar sua IA",
+    "descricao": "A Meta anunciou planos para construir uma usina nuclear que fornecerá energia para o desenvolvimento de inteligência artificial. A previsão é que a usina esteja operacional em 2030, com capacidade de gerar até 4 GW de energia.",
+    "imgUrl": "http://backend-instabytes-production.up.railway.app/675f9297751743bef4c47315.png",
+    "alt": "Ilustração representando o uso de energia nuclear pela Meta",
+    "link": "https://tecnoblog.net/noticias/meta-entra-no-meta-e-quer-energia-nuclear-para-sua-ia/"
+  },
+  {
+    "_id": "675f933d751743bef4c47316",
+    "titulo": "Com crescimento de IA Generativa, Python ultrapassa JavaScript no GitHub",
+    "descricao": "Python ultrapassou JavaScript como a linguagem de programação mais popular, impulsionado pelo crescimento da IA generativa e da ciência de dados.",
+    "imgUrl": "http://backend-instabytes-production.up.railway.app/675f933d751743bef4c47316.png",
+    "alt": "imagem python",
+    "link": "https://exame.com/inteligencia-artificial/python-ultrapassa-javascript-no-github-com-crescimento-de-ia-generativa-revela-octoverse-2024/"
+  },
+  {
+    "_id": "675f9380751743bef4c47317",
+    "titulo": "Entenda a diferença entre processadores Arm e x86",
+    "descricao": "Arm é a arquitetura mais popular para processadores de smartphones, e devido a isso o X86 esta perdendo espaço no mercado, entenda mais a respeito",
+    "imgUrl": "http://backend-instabytes-production.up.railway.app/675f9380751743bef4c47317.png",
+    "alt": "imagem do post arm x x86",
+    "link": "https://tecnoblog.net/responde/qual-e-a-diferenca-entre-processador-arm-e-x86/"
+  },
+  {
+    "_id": "675f943f751743bef4c47319",
+    "titulo": "Node.js 23.0: Suporte experimental a TypeScript e mais novidades",
+    "descricao": "Descubra as principais atualizações do Node.js 23.0, incluindo o suporte experimental a TypeScript, módulos ESM via require(), e melhorias no suporte a SQLite e Web Storage.",
+    "imgUrl": "http://backend-instabytes-production.up.railway.app/675f943f751743bef4c47319.png",
+    "alt": "Ilustração destacando o lançamento do Node.js 23.0",
+    "link": "https://sempreupdate.com.br/devs/node-js-23-0-suporte-typescript/"
+  },
+  {
+    "_id": "675f9496751743bef4c4731a",
+    "titulo": "Herança e Composição com Vue.js",
+    "descricao": "É comum ver a Orientação a Objetos ser relacionado a herança, mais especificamente reuso de lógicas e comportamentos. Porém, herança não é algo exclusivo da Orientação a Objetos. Dentro do contexto da Orientação a Objetos existe a composição, que infelizmente muitos deixam de lado ou simplesmente não conhecem. Endenda as maneiras de fazer reaproveitamento e herança de código com Vue.js.\n\n",
+    "imgUrl": "http://backend-instabytes-production.up.railway.app/675f9496751743bef4c4731a.png",
+    "alt": "Ilustracao de vue js",
+    "link": "https://imasters.com.br/back-end/heranca-e-composicao-com-vue-js"
+  },
+  {
+    "_id": "676708d2751743bef4c47324",
+    "titulo": "6 ferramentas JavaScript que todo desenvolvedor precisa conhecer",
+    "descricao": "Explore ferramentas essenciais como Architect para computação em nuvem, Interledger.js para pagamentos digitais, Intern para testes e JerryScript, ideal para IoT, que ajudam desenvolvedores a otimizar projetos JavaScript.",
+    "imgUrl": "http://backend-instabytes-production.up.railway.app/676708d2751743bef4c47324.png",
+    "alt": "ilustração representando ferramentas de desenvolvimento JavaScript.",
+    "link": "https://www.google.com/amp/s/itforum.com.br/6-ferramentas-javascript-que-voce-precisa-conhecer/amp/"
+  },
+  {
+    "_id": "67912a89751743bef4c47325",
+    "titulo": "Saiu o Deno 2.0, Será que agora é o fim do node.js?",
+    "descricao": "Deno finalmente chegou na versão 2.0! Saiba o que temos de mudanças no runtime mais popular de TypeScript! E por que ele pode substituir o Node.js.",
+    "imgUrl": "http://backend-instabytes-production.up.railway.app/67912a89751743bef4c47325.png",
+    "alt": "imagem deno.js",
+    "link": "https://imasters.com.br/typescript/deno-2-0-sera-que-agora-o-node-ja-era"
+  },
+  {
+    "_id": "67fd934ab7fcfff8dd1f95f2",
+    "titulo": "Teste",
+    "descricao": "Use o gerador de texto para criar seu próprio texto! O gerador de texto on-line Lorem Ipsum cria texto fictício, falso, causal ou marcador de posição",
+    "imgUrl": "http://backend-instabytes-production.up.railway.app/67fd934ab7fcfff8dd1f95f2.png",
+    "alt": "xxx",
+    "link": "https://imasters.com.br/typescript/deno-2-0-sera-que-agora-o-node-ja-era"
+  }
+]
