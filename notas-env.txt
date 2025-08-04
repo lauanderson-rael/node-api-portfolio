@@ -15,4 +15,10 @@ JWT_SECRET=$yrubhdcbhbcbdb
 
 JWT_EXPIRES_IN=1h
 
-GEMINI_API_KEY = AIzaSyD-KRrxPUzx-XXmGbgaWh71UAjGKGKJfsM
+
+
+http://localhost:3000/auth/login?username=admin&password=admin123
+{
+"username": "admin",
+ "password": "admin123"
+}

@@ -9,6 +9,7 @@ app.use(express.static("uploads"));
 app.use("/auth", authRoutes); // Rota para autenticação
 routes(app);
 
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
