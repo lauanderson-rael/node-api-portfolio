@@ -1,5 +1,4 @@
 import { getTodosPosts, criarPost, atualizarPost, deletarPost } from "../models/postsModel.js"
-import fs from 'fs'
 
 export async function listarPosts(req, res) {
     const posts = await getTodosPosts()
@@ -19,37 +18,14 @@ export async function postarNovoPost(req, res) {
 
 
 
-export async function uploadImagem(req, res) {
-    const id = req.params.id
-    const baseUrl = `${req.protocol}://${req.get('host')}`;
-    const novopost = {
-        titulo: "",
-        descricao: "",
-        imgUrl: baseUrl + "/" + "???" + ".png",
-        alt: "",
-        link: ""
-    }
 
-    try {
-        const postCriado = await criarPost(novopost)
-        const imagemAtualizada = `uploads/${postCriado.insertedId}.png`
-        fs.renameSync(req.file.path, imagemAtualizada)
-        res.status(200).json(postCriado)
-    } catch (error) {
-        console.log(error.message)
-        res.status(500).json({ "Erro": "Falha na requisição!" })
-    }
-}
 
 export async function atualizarNovoPost(req, res) {
     const id = req.params.id
-    const baseUrl = `${req.protocol}://${req.get('host')}`;
-    const urlImagem = `${baseUrl}/${id}.png`
 
     try {
-        const imgBuffer = fs.readFileSync(`uploads/${id}.png`)
         const post = {
-            imgUrl: urlImagem,
+            imgUrl: req.body.imgUrl,
             descricao: req.body.descricao,
             titulo: req.body.titulo,
             link: req.body.link,
