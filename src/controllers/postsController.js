@@ -17,9 +17,6 @@ export async function postarNovoPost(req, res) {
 }
 
 
-
-
-
 export async function atualizarNovoPost(req, res) {
     const id = req.params.id
 
@@ -39,7 +36,6 @@ export async function atualizarNovoPost(req, res) {
         res.status(500).json({ "Erro": "Falha na requisição!" })
     }
 }
-
 
 
 export async function deletarPostPorId(req, res) {
